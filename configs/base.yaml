@@ -1,0 +1,18 @@
+experiment:
+  name: "base"
+  seed: 42
+
+paths:
+  data_root: "./data"
+  outputs_root: "./outputs"
+
+model:
+  name: "baseline"
+  input_channels: 3
+  target_modalities: ["T2", "FLAIR"]
+
+training:
+  batch_size: 1
+  num_workers: 2
+  amp: true
+  grad_accum_steps: 1
